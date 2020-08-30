@@ -28,56 +28,56 @@ ___
 ### Main-Panel
 ---
 <br/>
-![Main-Panel](./pictures/mainPanel.PNG)
+![Main-Panel](images/mainPanel.png)
 <br/>
 <br/>
 ### Sign-Up Window
 
 <br/>
 <br/>
-![sign-up](pictures/signUp.PNG)
+![sign-up](images/signUp.png)
 <br/>
 <br/>
 ### Sign-In / Log-In Window
 <br/>
 <br/>
-![log-in](pictures/logIn.PNG)
+![log-in](images/logIn.png)
 <br/>
 <br/>
 ### Menu 
 <br/>
 <br/>
-![Menu](pictures/menu.PNG)
+![Menu](images/menu.png)
 <br/>
 <br/>
 ### Game-Play Window
 <br/>
 <br/>
-![gamePlay](pictures/gamePlay.PNG)
+![gamePlay](images/gamePlay.png)
 <br/>
 <br/>
 ### In-Playing_Mode
 <br/>
 <br/>
-![play](pictures/play.PNG)
+![play](images/play.png)
 <br/>
 <br/>
 ### Lose the Match
 <br/>
 <br/>
-![looser](pictures/looser.PNG)
+![looser](images/looser.png)
 <br/>
 <br/>
 ### Win the Match
 <br/>
 <br/>
-![winner](pictures/winner.PNG)
+![winner](images/winner.png)
 <br/>
 <br/>
 ### Save High Score
 <br/>
 <br/>
-![highScore](pictures/highScore.PNG)
+![highScore](images/highScore.png)
 <br/>
 <br/>
 ___
@@ -87,11 +87,11 @@ ___
 - Log-In
 - Guest Mode
 - Play/Pause
-- Highscore [Only for registered player]
+- Highscore ![Only for registered player]
 ___
 
 ##Sources
 This tutorial series assist me a lot.
-[Joel Rogness](https://www.youtube.com/watch?v=Qc_OlE1Xn38&list=PLn6h3KPOiM-ErYSmMH1ULtyKTE765d0V3)
+![Joel Rogness](https://www.youtube.com/watch?v=Qc_OlE1Xn38&list=PLn6h3KPOiM-ErYSmMH1ULtyKTE765d0V3)
 
 ### This project is totally open. Anyone can use it for their work. :-)
