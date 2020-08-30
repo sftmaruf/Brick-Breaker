@@ -28,56 +28,56 @@ ___
 ### Main-Panel
 ---
 <br/>
-![Main-Panel](./pictures/mainPanel.png)
+![Main-Panel](./pictures/mainPanel.PNG)
 <br/>
 <br/>
 ### Sign-Up Window
 
 <br/>
 <br/>
-![sign-up](./pictures/signUp.png)
+![sign-up](pictures/signUp.PNG)
 <br/>
 <br/>
 ### Sign-In / Log-In Window
 <br/>
 <br/>
-![log-in](./pictures/logIn.png)
+![log-in](pictures/logIn.PNG)
 <br/>
 <br/>
 ### Menu 
 <br/>
 <br/>
-![Menu](pictures/menu.png)
+![Menu](pictures/menu.PNG)
 <br/>
 <br/>
 ### Game-Play Window
 <br/>
 <br/>
-![gamePlay](pictures/gamePlay.png)
+![gamePlay](pictures/gamePlay.PNG)
 <br/>
 <br/>
 ### In-Playing_Mode
 <br/>
 <br/>
-![play](pictures/play.png)
+![play](pictures/play.PNG)
 <br/>
 <br/>
 ### Lose the Match
 <br/>
 <br/>
-![looser](./pictures/looser.png)
+![looser](pictures/looser.PNG)
 <br/>
 <br/>
 ### Win the Match
 <br/>
 <br/>
-![winner](./pictures/winner.png)
+![winner](pictures/winner.PNG)
 <br/>
 <br/>
 ### Save High Score
 <br/>
 <br/>
-![highScore](pictures/highScore.png)
+![highScore](pictures/highScore.PNG)
 <br/>
 <br/>
 ___
@@ -94,4 +94,4 @@ ___
 This tutorial series assist me a lot.
 [Joel Rogness](https://www.youtube.com/watch?v=Qc_OlE1Xn38&list=PLn6h3KPOiM-ErYSmMH1ULtyKTE765d0V3)
 
-### This project totally is open. Anyone can use it for their work. :-)
+### This project is totally open. Anyone can use it for their work. :-)
