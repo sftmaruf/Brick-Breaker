@@ -31,50 +31,34 @@ ___
 
 
 ! [sign-up](images/signUp.png)
-<br/>
-<br/>
+
 ### Sign-In / Log-In Window
-<br/>
-<br/>
+
 ! [log-in](images/logIn.png)
-<br/>
-<br/>
+
 ### Menu 
-<br/>
-<br/>
+
 ! [Menu](images/menu.png)
-<br/>
-<br/>
+
 ### Game-Play Window
-<br/>
-<br/>
+
 ! [gamePlay](images/gamePlay.png)
-<br/>
-<br/>
+
 ### In-Playing_Mode
-<br/>
-<br/>
+
 ! [play](images/play.png)
-<br/>
-<br/>
+
 ### Lose the Match
-<br/>
-<br/>
+
 ! [looser](images/looser.png)
-<br/>
-<br/>
+
 ### Win the Match
-<br/>
-<br/>
+
 ! [winner](images/winner.png)
-<br/>
-<br/>
+
 ### Save High Score
-<br/>
-<br/>
+
 ! [highScore](images/highScore.png)
-<br/>
-<br/>
 ___
 
 ## Features
