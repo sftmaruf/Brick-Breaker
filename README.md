@@ -28,7 +28,7 @@ ___
 ### Main-Panel
 ---
 <br/>
-![Main-Panel](images/mainPanel.png)
+[Main-Panel](./images/mainPanel.png)
 <br/>
 <br/>
 ### Sign-Up Window
