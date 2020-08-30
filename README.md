@@ -1,4 +1,4 @@
-Brick-Breaker-Game
+#Brick-Breaker-Game
 
 ___
 Introduction
