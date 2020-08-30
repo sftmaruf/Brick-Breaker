@@ -1,13 +1,13 @@
-#Brick-Breaker-Game
+Brick-Breaker-Game
 
 ___
-##Introduction
+Introduction
 This is a game project for my "System Analysis And Design" Course.
 It's build for entertainment and expand my programming knowledge.
 
 ___
 
-##Technologies
+Technologies
 - Java 12 or 14
 - MSSQL-2014 12.0.2269.0
 - Design Pattern
@@ -16,7 +16,7 @@ ___
 	- Facade
 
 ___
-##Launch
+Launch
 
 - For run this project need to pull this repository in local machine.
 - Guest mode is usable without any modification. 
@@ -24,14 +24,14 @@ ___
 	In the source folder database file is included in database folder. User need to run it in MSSQL and connect it with the source code
 
 ___
-##Brick-Breaker
-### Main-Panel
----
+Brick-Breaker
+Main-Panel
+___
 <br/>
 [Main-Panel](./images/mainPanel.png)
 <br/>
 <br/>
-### Sign-Up Window
+ Sign-Up Window
 
 <br/>
 <br/>
