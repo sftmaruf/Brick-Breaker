@@ -7,7 +7,7 @@ public class SetAllMechanismByFacade {
 	//facade design pattern
 	public static void mechanism() {
 		JFrame theFrame = new JFrame("Brick Breaker");
-//       GamePanel thePanel = new GamePanel();F
+//       GamePanel thePanel = new GamePanel();
 		GamePanel thePanel = GamePanel.getGamePanel();
 
 		theFrame.setLocation(500, 200);

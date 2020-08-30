@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>READ.md</name>
+			<type>1</type>
+			<location>C:/Brick_Breaker/src/brick/_breaker/READ.md</location>
+		</link>
+	</linkedResources>
 </projectDescription>
