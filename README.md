@@ -1,4 +1,4 @@
-#Brick-Breaker-Game
+# Brick-Breaker-Game
 
 ___
 Introduction
@@ -24,7 +24,7 @@ Launch
 	In the source folder database file is included in database folder. User need to run it in MSSQL and connect it with the source code
 
 ___
-Brick-Breaker
+# Brick-Breaker
 Main-Panel
 ___
 <br/>
