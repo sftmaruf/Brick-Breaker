@@ -36,7 +36,7 @@ ___
 
 ### Sign-In / Log-In Window
 
-[login](./images/logIn.png)
+![login](./images/logIn.png)
 
 ### Menu 
 
