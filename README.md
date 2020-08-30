@@ -25,12 +25,12 @@ ___
 
 ___
 ## Brick-Breaker
-## Main-Panel
+### Main-Panel
 ! [Main-Panel](./images/mainPanel.png)
-## Sign-Up Window
+### Sign-Up Window
 
 
-! [sign-up](images/signUp.png)
+! [sign-up](./signUp.png)
 
 ### Sign-In / Log-In Window
 
