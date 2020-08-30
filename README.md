@@ -47,19 +47,19 @@ ___
 ### Menu 
 <br/>
 <br/>
-![Menu](./pictures/menu.png)
+![Menu](pictures/menu.png)
 <br/>
 <br/>
 ### Game-Play Window
 <br/>
 <br/>
-![gamePlay](./pictures/gamePlay.png)
+![gamePlay](pictures/gamePlay.png)
 <br/>
 <br/>
 ### In-Playing_Mode
 <br/>
 <br/>
-![play](./pictures/play.png)
+![play](pictures/play.png)
 <br/>
 <br/>
 ### Lose the Match
@@ -77,7 +77,7 @@ ___
 ### Save High Score
 <br/>
 <br/>
-![highScore](./pictures/highScore.png)
+![highScore](pictures/highScore.png)
 <br/>
 <br/>
 ___
