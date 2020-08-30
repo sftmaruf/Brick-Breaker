@@ -26,39 +26,41 @@ ___
 ___
 ## Brick-Breaker
 ### Main-Panel
-! [Main-Panel](./images/mainPanel.png)
+
+![main](./images/mainPanel.png)
+
 ### Sign-Up Window
 
 
-! [sign-up](./signUp.png)
+![signup](./images/signUp.png)
 
 ### Sign-In / Log-In Window
 
-! [log-in](images/logIn.png)
+[login](./images/logIn.png)
 
 ### Menu 
 
-! [Menu](images/menu.png)
+![Menu](./images/menu.png)
 
 ### Game-Play Window
 
-! [gamePlay](images/gamePlay.png)
+![gamePlay](./images/gamePlay.png)
 
 ### In-Playing_Mode
 
-! [play](images/play.png)
+![play](./images/play.png)
 
 ### Lose the Match
 
-! [looser](images/looser.png)
+![looser](./images/looser.png)
 
 ### Win the Match
 
-! [winner](images/winner.png)
+![winner](./images/winner.png)
 
 ### Save High Score
 
-! [highScore](images/highScore.png)
+![highScore](./images/highScore.png)
 ___
 
 ## Features
