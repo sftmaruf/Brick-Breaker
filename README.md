@@ -18,7 +18,7 @@ ___
 ___
 ## Launch
 
-- For run this project need to pull this repository in local machine.
+- For run this project need to clone this repository in local machine.
 - Guest mode is usable without any modification. 
 - For using feature like sign-in and sign-up user need to connect a database to the source code.
 	In the source folder database file is included in database folder. User need to run it in MSSQL and connect it with the source code
