@@ -68,7 +68,7 @@ ___
 - Log-In
 - Guest Mode
 - Play/Pause
-- Highscore ![Only for registered player]
+- Highscore [Only for registered player]
 ___
 
 ## Sources
