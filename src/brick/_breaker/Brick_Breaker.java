@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 
 public class Brick_Breaker {
 
-	public static final int Width = 640, Height = 480;
+    public static final int Width = 640, Height = 480;
     public static boolean show = false, run = true, ON = false;
      
     public static void main(String[] args) {
