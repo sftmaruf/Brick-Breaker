@@ -29,11 +29,11 @@ public class GamePanel extends JPanel {
 //	private ball theBall;
 //	private paddle thePaddle;
 //	private map theMap;
-	
+
 	Ball theBall;
 	Paddle thePaddle;
 	Map theMap;
-	
+
 	private High_Score theScore;
 	private ArrayList<Feature> theFeature;
 	private MyMouseMotionListener theMouseListener;
@@ -59,18 +59,15 @@ public class GamePanel extends JPanel {
 //		theBall = new ball(1, 3);
 //		thePaddle = new paddle(70, 12);
 //		theMap = new map(4, 8);
-		
-		//using factoryMethod design pattern
+
+		// using factoryMethod design pattern
 		theBall = (Ball) ComponentsFactory.getComponents("ball");
-		thePaddle = (Paddle) ComponentsFactory.getComponents("paddle");	
+		thePaddle = (Paddle) ComponentsFactory.getComponents("paddle");
 		theMap = (Map) ComponentsFactory.getComponents("map");
-		
-		
+
 		theScore = new High_Score();
 		theFeature = new ArrayList<Feature>();
 		pause = new Pause();
-		
-		
 
 		theMouseListener = new MyMouseMotionListener(); // recive mouse position
 		theMouseAdapter = new MyMouseAdapter(); // recive mouse pressed
@@ -105,17 +102,16 @@ public class GamePanel extends JPanel {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-			}//end of while 2 loop
-		} // end of while 1 loop
-	} // end of playGames
+			}
+		}
+	}
 
 	public void update() { // all component update here
 		checkCollision();
 		theBall.update();
 		thePaddle.update();
 		pause.update();
-		for (Feature feat : theFeature)
-		{
+		for (Feature feat : theFeature) {
 			feat.update();
 		}
 
@@ -158,7 +154,7 @@ public class GamePanel extends JPanel {
 		Graphics2D graphic2DTool = (Graphics2D) a;
 		graphic2DTool.drawImage(image, 0, 0, Brick_Breaker.Width, Brick_Breaker.Height, null);
 		graphic2DTool.dispose();
-	} //end of paint component
+	} // end of paint component
 
 	public void checkCollision() {
 		Rectangle ballRect = theBall.getRect();
@@ -261,7 +257,7 @@ public class GamePanel extends JPanel {
 
 					theBall = (Ball) ComponentsFactory.getComponents("ball");
 					thePaddle = (Paddle) ComponentsFactory.getComponents("paddle");
-					theMap = (Map)ComponentsFactory.getComponents("map");
+					theMap = (Map) ComponentsFactory.getComponents("map");
 					draw();
 					Brick_Breaker.setShow(true);
 
@@ -272,7 +268,8 @@ public class GamePanel extends JPanel {
 		}
 
 		@Override
-		public void keyReleased(KeyEvent ke) {}
+		public void keyReleased(KeyEvent ke) {
+		}
 	}
 
 }

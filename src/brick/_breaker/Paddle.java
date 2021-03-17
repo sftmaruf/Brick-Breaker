@@ -8,102 +8,96 @@ import java.awt.event.KeyEvent;
 
 public class Paddle extends Components {
 
-    private double x;
-    private int paddleWidth, paddleHeight, fixedWidth, posMouse, keyPress;
-    public final int posY = Brick_Breaker.Height - 100;
-    private long timer;
-    private boolean paddleModON, mouseMode , keyMode , right, left;
+	private double initialPositionInXAxis;
+	private int paddleWidth, paddleHeight, fixedWidth, posMouse;
+	public final int posY = Brick_Breaker.Height - 100;
+	private long timer;
+	private boolean paddleModON, mouseMode, keyMode, rightPress, leftPress;
 
-    public Paddle(int width, int height) {
-        paddleWidth = width;
-        fixedWidth = width;
-        paddleHeight = height;
-        right = left = true;
-        mouseMode = false;
+	public Paddle(int width, int height) {
+		paddleWidth = width;
+		fixedWidth = width;
+		paddleHeight = height;
+		rightPress = leftPress = false;
+		initialPositionInXAxis = Brick_Breaker.Width / 2 - paddleWidth / 2;
+	}
 
-        x = Brick_Breaker.Width / 2 - paddleWidth / 2;
-    }
+	public void update() {
 
-    public void update() {
+		if (keyMode == true) {
+			if (rightPress == true) {
+				initialPositionInXAxis += 50 * .5;
+				rightPress = false;
+			} else if (leftPress == true) {
+				initialPositionInXAxis -= 50 * .5;
+				leftPress = false;
+			}
+		}
 
-        if (right == true) {
-            
-            x += 50 * .5;
-            right = false;
-            
-        } else if (left == true) {
-            
-            x -= 50 * .5;
-            left = false;
-            
-        }
+		if (initialPositionInXAxis > Brick_Breaker.Width - (paddleWidth + 20)) {
+			initialPositionInXAxis = Brick_Breaker.Width - (paddleWidth + 20);
+		} else if (initialPositionInXAxis < 10) {
+			initialPositionInXAxis = 5;
+		}
 
-        if (x > Brick_Breaker.Width - paddleWidth) {
-            x = Brick_Breaker.Width - (paddleWidth + 10);
-        }else if(x < 10){
-            x = 5 ;
-        }
-        
-        if(mouseMode == true){
-            keyMode = false ;
-            x += (posMouse - x) * .1;           //make paddle move smooth by differet between mouse and paddle distance
-  //        System.out.println(posMouse);       // for print mouse position
+		if (mouseMode == true) {
+			keyMode = false;
+			initialPositionInXAxis += (posMouse - initialPositionInXAxis) * .1; // make paddle move smooth by different
+																				// between mouse and paddle distance
+		}
 
-            
-        }
-           
-        if ((System.nanoTime() - timer) / 1000 > 4000000) {   //using nanotime for run mod in a giving time
-            paddleWidth = fixedWidth;
-            paddleModON = false;
-        }
+		if ((System.nanoTime() - timer) / 1000 > 4000000) { // using nanotime for run mod in a giving time
+			paddleWidth = fixedWidth;
+			paddleModON = false;
+		}
 
-    }
+	}
 
-    public void draw(Graphics2D a) {
-        a.setColor(Color.DARK_GRAY);
-        a.fillRoundRect((int) x, posY, paddleWidth, paddleHeight, 10, 10);
-        if (paddleModON == true) {
-            a.setColor(Color.YELLOW);
-            a.setFont(new Font("Courier New", Font.BOLD, 14));
-            a.drawString("Finish: " + (4 - ((System.nanoTime() - timer) / 1000000000)), (int) x + 30, posY + 9);
-        }
+	public void draw(Graphics2D a) {
+		a.setColor(Color.DARK_GRAY);
+		a.fillRoundRect((int) initialPositionInXAxis, posY, paddleWidth, paddleHeight, 10, 10);
+		if (paddleModON == true) {
+			a.setColor(Color.YELLOW);
+			a.setFont(new Font("Roboto", Font.BOLD, 11);
+			a.drawString("Finish: " + (4 - ((System.nanoTime() - timer) / 1000000000)),
+					(int) initialPositionInXAxis + 50, posY + 9);
+		}
 
-    }
+	}
 
-    public void mouseMoved(int xPosMouse) {
-        mouseMode = true ; 
-        posMouse = xPosMouse - paddleWidth / 2;
+	public void mouseMoved(int xPosMouse) {
+		mouseMode = true;
+		posMouse = xPosMouse - paddleWidth / 2;
+		if (posMouse > Brick_Breaker.Width - paddleWidth) {
+			posMouse = Brick_Breaker.Width - (paddleWidth + 10);
+		}
+	}
 
-        if (posMouse > Brick_Breaker.Width - paddleWidth) {
-            posMouse = Brick_Breaker.Width - (paddleWidth + 10);
-        }
-    }
+	public void keyPressed(int keyPress) {
+		mouseMode = false;
+		keyMode = true;
+		if (keyPress == KeyEvent.VK_RIGHT) {
+			rightPress = true;
+		} else if (keyPress == KeyEvent.VK_LEFT) {
+			leftPress = true;
+		}
+	}
 
-    public void keyPressed(int keyPress) {
-        mouseMode = false;
-        keyMode = true;
-        if (keyPress == KeyEvent.VK_RIGHT) {
-            right = true;
-        } else if (keyPress == KeyEvent.VK_LEFT) {
-            left = true;
-        }
-    }
+	public Rectangle getRect() {
+		return new Rectangle((int) initialPositionInXAxis, posY, paddleWidth, paddleHeight);
+	}
 
-    public Rectangle getRect() {
-        return new Rectangle((int) x, posY, paddleWidth, paddleHeight);
-    }
+	public void setWidth(int width) {
+		paddleWidth = width;
+		paddleModON = true;
+		setTimer();
+	}
 
-    public void setWidth(int width) {
-        paddleWidth = width;
-        paddleModON = true;
-        setTimer();
-    }
+	public int getWidth() {
+		return paddleWidth;
+	}
 
-    public int getWidth() {
-        return paddleWidth;
-    }
-
-    public void setTimer() {
-        timer = System.nanoTime();
-    }
+	public void setTimer() {
+		timer = System.nanoTime();
+	}
 }
