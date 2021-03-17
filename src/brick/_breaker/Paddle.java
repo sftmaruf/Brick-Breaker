@@ -9,22 +9,21 @@ import java.awt.event.KeyEvent;
 public class Paddle extends Components {
 
 	private double initialPositionInXAxis;
-	private int paddleWidth, paddleHeight, fixedWidth, posMouse;
-	public final int posY = Brick_Breaker.Height - 100;
+	private int paddleWidth, paddleHeight, fixedPaddleWidth, mousePos;
+	public final int positionInYAxis = Brick_Breaker.Height - 100;
 	private long timer;
-	private boolean paddleModON, mouseMode, keyMode, rightPress, leftPress;
+	private boolean paddleModON, mouseMode, keyboardMode, rightPress, leftPress;
 
 	public Paddle(int width, int height) {
 		paddleWidth = width;
-		fixedWidth = width;
+		fixedPaddleWidth = width;
 		paddleHeight = height;
 		rightPress = leftPress = false;
 		initialPositionInXAxis = Brick_Breaker.Width / 2 - paddleWidth / 2;
 	}
 
 	public void update() {
-
-		if (keyMode == true) {
+		if (keyboardMode == true) {
 			if (rightPress == true) {
 				initialPositionInXAxis += 50 * .5;
 				rightPress = false;
@@ -41,13 +40,13 @@ public class Paddle extends Components {
 		}
 
 		if (mouseMode == true) {
-			keyMode = false;
-			initialPositionInXAxis += (posMouse - initialPositionInXAxis) * .1; // make paddle move smooth by different
+			keyboardMode = false;
+			initialPositionInXAxis += (mousePos - initialPositionInXAxis) * .1; // make paddle move smooth by different
 																				// between mouse and paddle distance
 		}
 
 		if ((System.nanoTime() - timer) / 1000 > 4000000) { // using nanotime for run mod in a giving time
-			paddleWidth = fixedWidth;
+			paddleWidth = fixedPaddleWidth;
 			paddleModON = false;
 		}
 
@@ -55,27 +54,27 @@ public class Paddle extends Components {
 
 	public void draw(Graphics2D a) {
 		a.setColor(Color.DARK_GRAY);
-		a.fillRoundRect((int) initialPositionInXAxis, posY, paddleWidth, paddleHeight, 10, 10);
+		a.fillRoundRect((int) initialPositionInXAxis, positionInYAxis, paddleWidth, paddleHeight, 10, 10);
 		if (paddleModON == true) {
 			a.setColor(Color.YELLOW);
-			a.setFont(new Font("Roboto", Font.BOLD, 11);
+			a.setFont(new Font("Roboto", Font.BOLD, 11));
 			a.drawString("Finish: " + (4 - ((System.nanoTime() - timer) / 1000000000)),
-					(int) initialPositionInXAxis + 50, posY + 9);
+					(int) initialPositionInXAxis + 50, positionInYAxis + 9);
 		}
 
 	}
 
 	public void mouseMoved(int xPosMouse) {
 		mouseMode = true;
-		posMouse = xPosMouse - paddleWidth / 2;
-		if (posMouse > Brick_Breaker.Width - paddleWidth) {
-			posMouse = Brick_Breaker.Width - (paddleWidth + 10);
+		mousePos = xPosMouse - paddleWidth / 2;
+		if (mousePos > Brick_Breaker.Width - paddleWidth) {
+			mousePos = Brick_Breaker.Width - (paddleWidth + 10);
 		}
 	}
 
 	public void keyPressed(int keyPress) {
 		mouseMode = false;
-		keyMode = true;
+		keyboardMode = true;
 		if (keyPress == KeyEvent.VK_RIGHT) {
 			rightPress = true;
 		} else if (keyPress == KeyEvent.VK_LEFT) {
@@ -84,7 +83,7 @@ public class Paddle extends Components {
 	}
 
 	public Rectangle getRect() {
-		return new Rectangle((int) initialPositionInXAxis, posY, paddleWidth, paddleHeight);
+		return new Rectangle((int) initialPositionInXAxis, positionInYAxis, paddleWidth, paddleHeight);
 	}
 
 	public void setWidth(int width) {
