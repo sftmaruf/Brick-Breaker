@@ -10,7 +10,7 @@ public class Paddle extends Components {
 
 	private double initialPositionInXAxis;
 	private int paddleWidth, paddleHeight, fixedPaddleWidth, mousePos;
-	public final int positionInYAxis = Brick_Breaker.Height - 100;
+	public final int POSITIONINYAXIS = Brick_Breaker.Height - 100;
 	private long timer;
 	private boolean paddleModON, mouseMode, keyboardMode, rightPress, leftPress;
 
@@ -54,14 +54,13 @@ public class Paddle extends Components {
 
 	public void draw(Graphics2D a) {
 		a.setColor(Color.DARK_GRAY);
-		a.fillRoundRect((int) initialPositionInXAxis, positionInYAxis, paddleWidth, paddleHeight, 10, 10);
+		a.fillRoundRect((int) initialPositionInXAxis, POSITIONINYAXIS, paddleWidth, paddleHeight, 10, 10);
 		if (paddleModON == true) {
 			a.setColor(Color.YELLOW);
 			a.setFont(new Font("Roboto", Font.BOLD, 11));
 			a.drawString("Finish: " + (4 - ((System.nanoTime() - timer) / 1000000000)),
-					(int) initialPositionInXAxis + 50, positionInYAxis + 9);
+					(int) initialPositionInXAxis + 50, POSITIONINYAXIS + 9);
 		}
-
 	}
 
 	public void mouseMoved(int xPosMouse) {
@@ -83,7 +82,7 @@ public class Paddle extends Components {
 	}
 
 	public Rectangle getRect() {
-		return new Rectangle((int) initialPositionInXAxis, positionInYAxis, paddleWidth, paddleHeight);
+		return new Rectangle((int) initialPositionInXAxis, POSITIONINYAXIS, paddleWidth, paddleHeight);
 	}
 
 	public void setWidth(int width) {
